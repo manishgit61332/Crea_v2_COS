@@ -42,7 +42,8 @@ export default function ChatPage() {
             const userId = user?.id || 'demo-user-id';
 
             // Call Backend API
-            const res = await fetch('http://localhost:3001/api/chat', {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${apiUrl}/api/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
