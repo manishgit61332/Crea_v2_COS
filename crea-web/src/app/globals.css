@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #E3FFEB;
+  
+  --font-instrument-serif: 'Times New Roman', serif; /* Fallback until fonts loaded */
+  --font-satoshi: 'Arial', sans-serif; /* Fallback */
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-satoshi);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-instrument-serif);
+    color: #FF7701; /* Brand Orange for headings per design */
+}
